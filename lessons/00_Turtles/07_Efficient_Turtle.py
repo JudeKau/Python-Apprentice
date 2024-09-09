@@ -20,19 +20,19 @@ def draw_polygon(sides):
     angle = 360/sides # Calculate angle from number of sides
     
     for i in range(sides): 
-        tina.forwaard(100) 
+        tina.forward(100) 
         tina.left(angle) # Loop through the number of sides                                 #  # Move tina forward by the forward distance             # Turn tina left by the left turn
 
 
-draw_polygon('square')                        # Draw a square
+draw_polygon(4)                        # Draw a square
 
 tina.goto(50, 25)                                      # Move tina to another spot on the screen
 
-draw_polygon('triangle')                        # Draw a pentagon
+draw_polygon(5)                        # Draw a pentagon
 
-...                                      # Move tina to another spot on the screen
+tina.goto(100, 100)                                     # Move tina to another spot on the screen
 
-draw_polygon(...)                        # Draw a hexagon
+draw_polygon(6)                        # Draw a hexagon
 
 
 turtle.exitonclick()                     # Close the window when we click on it
