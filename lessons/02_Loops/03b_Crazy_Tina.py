@@ -32,7 +32,7 @@ for  i in range(12):
     left = 30
     color = colors
 
-for color in colors
+for color in colors:
     tina.color(color)
     tina.forward(forward)
     tina.left(left)

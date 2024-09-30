@@ -33,9 +33,21 @@ number1 = simpledialog.askinteger('Infuriating Calculator', "Enter a number")
 # Ask the user for the second number
 number2 = simpledialog.askinteger('Infuriating Calculator', "Enter a second number")
 # Ask the user for the math operation
-operation = simpledialog.askstring('Infuriating Calculator', "Type an operation()")
+operation = simpledialog.askstring('Infuriating Calculator', "Type an operation(multiply, divide, add, subtract)")
 # Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
+if operation == 'multiply':
+    messagebox.showinfo('Infuriating Calculator', number1 * number2)
 
+elif operation == 'divide':
+    messagebox.showinfo('infuriating Calculator', number1 / number2)
+
+elif operation == 'add':
+    messagebox.showinfo('Infuriating Calculator', number1 + number2)
+
+elif operation == 'subtract':
+    messagebox.showinfo('Infuriating Calculator', number1 - number2)
 # If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
-
+else:
+    messagebox.showerror('error', "type an operation")
 # Keep the window open
+window.mainloop()
