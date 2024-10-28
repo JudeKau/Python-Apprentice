@@ -40,19 +40,14 @@ for i in range(10):
 # In the loop, calculate or increment the number
 
 # Use % determing the display, using fizzbuzz rules
-if i % 15 == 0:
-    Text(app, text='🐍', grid=[col, row], color=color)
-elif i % 5 == 0:
-    Text(app, text='🦡', grid=[col, row], color=color)
-elif i % 3 == 0:
-    Text(app, text='🍄', grid=[col, row], color=color)
-else:
-    Text(app, text='', grid=[col, row], color=color)
 
 # If you are displaying a number, calculate the sum of the digits and determine the color
 if i + j % 2 == 0:
-    
+    Text(app, text='', grid=[i, j], color='blue')
+elif i + j % 2 > 0:
+    Text(app, text='', grid=[i, j], color='red')
+else:
+    Text(app, text='', grid=[i, j], color='')
 # Call Text(app, text='...', grid=[col, row], color=...) to display something. 
-    Text(app, text='🦡', grid=[col, row], color=)
-
+   
 app.display()
