@@ -37,7 +37,7 @@ app = App("Numbers Grid", layout="grid")
 for i in range(10):
     for j in range(10):
         print(f"{i}{j}", end = ' ')
-    app.display()
+
 # In the loop, calculate or increment the number
 
 # Use % determing the display, using fizzbuzz rules
@@ -52,7 +52,7 @@ elif i % 3 == 0:
     Text(app, text='🍄', grid=[i, j])
 
 else:
-    Text(app, text='i', grid=[i, j])
+    Text(app, text= i, grid=[i, j])
 
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
