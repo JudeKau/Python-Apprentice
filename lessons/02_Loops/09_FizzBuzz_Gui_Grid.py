@@ -33,8 +33,8 @@ app = App("Numbers Grid", layout="grid")
 
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
+
 color = 'blue'
-text = '🦡'
 colors=['red', 'green', 'blue']
 for i in range(10):
     for j in range(10):
@@ -64,15 +64,16 @@ for i in range(10):
 
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
-        # if i + j % 2 == 0:
-        #     Text(app, grid=[i, j], color= 'blue')
-
-        # else:
-        #     Text(app, grid=[i, j], color= 'red')
+print()
 
 # Call for color in colors:                            # loop through the colors
-    
-    print()
+
+for color in colors:
+    if i + j % 2 == 0:
+        Text(app, grid=[i, j], color= colors[2])
+
+    else:
+        Text(app, grid=[i, j], color= colors[0])
 
 
 # Call to display something. 
