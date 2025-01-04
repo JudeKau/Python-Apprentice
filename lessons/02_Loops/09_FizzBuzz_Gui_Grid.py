@@ -9,7 +9,7 @@ color of the number based on the following rules:
 * If the number is evenly divisible by 15, print '🐍'
 * If it is divisible by neither, print the number.
 
-Additionally, If you are displaying a number  color the numbers as follows:
+Additionally, If you are displaying a number color the numbers as follows:
 
 * If the sum of the digits of the number is even, color the number blue
 * If the sum of the digits of the number is odd, color the number red
@@ -64,19 +64,18 @@ for i in range(10):
 
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
-print()
+
 
 # Call for color in colors:                            # loop through the colors
 
-for color in colors:
-    if i + j % 2 == 0:
-        Text(app, grid=[i, j], color= colors[2])
+        for color in colors:
+            if i + j % 2 == 0:
+                Text(app, text= text, grid=[i, j], color= colors[2])
 
-    else:
-        Text(app, grid=[i, j], color= colors[0])
+            else:
+                Text(app, text= text, grid=[i, j], color= colors[0])
 
 
 # Call to display something. 
-
 
 app.display()
