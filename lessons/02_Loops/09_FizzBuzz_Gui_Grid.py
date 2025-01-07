@@ -34,47 +34,47 @@ app = App("Numbers Grid", layout="grid")
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
 
-color = 'blue'
-colors=['red', 'green', 'blue']
 for i in range(10):
     for j in range(10):
         print(f"{i}{j}", end = ' ')
-     
+    
 
 # In the loop, calculate or increment the number
 
 # Use % determing the display, using fizzbuzz rules
         
+        color = 'blue'
+        colors=['red', 'green', 'blue']
+        
         if i % 5 == 0:
             text = '🦡'
-            Text(app, text=text, grid=[i, j], color = color)
+            # Text(app, text=text, grid=[i, j], color = color)
 
         elif i % 3 == 0:
             text = '🍄'
-            Text(app, text=text, grid=[i, j], color = color)
+            #Text(app, text=text, grid=[i, j], color = color)
 
         elif i % 15 == 0:
             text = '🐍'
-            Text(app, text=text, grid=[i, j], color = color)
+            #Text(app, text=text, grid=[i, j], color = color)
         
         else:
             text = str(i)
-            Text(app, text=text, grid=[i, j], color = color)
-        
+            #Text(app, text=text, grid=[i, j], color = color)
+      
 
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
-
-
 # Call for color in colors:                            # loop through the colors
 
-        for color in colors:
-            if i + j % 2 == 0:
-                Text(app, text= text, grid=[i, j], color= colors[2])
+        Text(app, text=text, grid=[i, j], color = color)    
+            
+            # if i + j % 2 == 0:
+            #     Text(app, text= text, grid=[i, j], color= colors[2])
 
-            else:
-                Text(app, text= text, grid=[i, j], color= colors[0])
-
+            # else:
+            #     Text(app, text= text, grid=[i, j], color= colors[0])
+print()
 
 # Call to display something. 
 
