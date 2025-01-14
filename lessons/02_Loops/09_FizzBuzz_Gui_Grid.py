@@ -20,7 +20,7 @@ to display the number in the grid cell at the row and column you specify.
     Text(app, text=str(number), grid=[col, row], color=color)
 
 Or to display a badger: 
-    
+
     Text(app, text='🦡', grid=[col, row], color=color)
 
 HINT: You can use % and // to get the first and last digit of a number, 
@@ -37,44 +37,34 @@ app = App("Numbers Grid", layout="grid")
 for i in range(10):
     for j in range(10):
         print(f"{i}{j}", end = ' ')
-    
 
 # In the loop, calculate or increment the number
 
 # Use % determing the display, using fizzbuzz rules
-        
-        color = 'blue'
-        colors=['red', 'green', 'blue']
-        
+
         if i % 5 == 0:
             text = '🦡'
-            # Text(app, text=text, grid=[i, j], color = color)
 
         elif i % 3 == 0:
             text = '🍄'
-            #Text(app, text=text, grid=[i, j], color = color)
 
         elif i % 15 == 0:
             text = '🐍'
-            #Text(app, text=text, grid=[i, j], color = color)
-        
+
         else:
             text = str(i)
-            #Text(app, text=text, grid=[i, j], color = color)
-      
 
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
+        if i + j % 2 == 0:
+            color = 'blue'
+
+        else:
+            color = 'red'
+
 # Call for color in colors:                            # loop through the colors
 
-        Text(app, text=text, grid=[i, j], color = color)    
-            
-            # if i + j % 2 == 0:
-            #     Text(app, text= text, grid=[i, j], color= colors[2])
-
-            # else:
-            #     Text(app, text= text, grid=[i, j], color= colors[0])
-print()
+        Text(app, text = text, grid = [i, j], color = color)    
 
 # Call to display something. 
 
