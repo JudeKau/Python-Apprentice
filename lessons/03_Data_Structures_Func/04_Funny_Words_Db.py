@@ -32,7 +32,6 @@ def add_definition(db, key, value):
     - db (dict): The database to add the definition to.
     - key (str): The key for the new definition.
     - value (str): The value for the new definition.
-
     Returns:
     - None
 
