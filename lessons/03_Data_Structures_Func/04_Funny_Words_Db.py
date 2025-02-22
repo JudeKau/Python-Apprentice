@@ -25,6 +25,7 @@ an error message will be displayed and new definitions will not be added.
 
 
 def add_definition(db, key, value):
+    db[key] = value
     """
     Add a new definition to the database.
 
@@ -42,10 +43,13 @@ def add_definition(db, key, value):
 
     # Set the item in the database
 
-    pass
+def check_the_limit(db):
+    if len(db) == 5:
+        error
 
 
 def delete_definition(db, key):
+    db.remove(key)
     """
     Deletes the definition associated with the given key from the database.
 
@@ -93,12 +97,9 @@ def update_listbox(db):
         "Item 1: Fake Definition 1",
         "Item 2: Fake Definition 2",
         "Item 3: fake Definition 3"
-    ]
+        ]
 
-    # Add each definition to a string
-    # iterate over the dict's key-value pairs and turn them into
-    # strings, then add the strings to the list with .append()
-
+   
     return l
 
 ################################################################
