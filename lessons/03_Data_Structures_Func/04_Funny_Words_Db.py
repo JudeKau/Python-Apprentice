@@ -67,6 +67,7 @@ def delete_definition(db, key):
 
 
 def is_funny(definition):
+    definition
     """
     Check if the definition is funny, which means it contains one of the words:
 
