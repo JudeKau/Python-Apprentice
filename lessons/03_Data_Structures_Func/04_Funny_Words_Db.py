@@ -47,7 +47,6 @@ def check_the_limit(db):
     if len(db) == 5:
         error
 
-
 def delete_definition(db, key):
     db.remove(key)
     """
@@ -98,6 +97,7 @@ def is_funny(definition):
     return False
 
 def update_listbox(db):
+    return db
     """
     Update the listbox with the current definitions in the database.1
 
