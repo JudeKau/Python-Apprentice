@@ -7,7 +7,11 @@ O_MARK = "O"
 # Implement check_row() and check_win() to allow the game to check if a player has won
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
 
+
 def check_row(l):
+    if l == X_MARK:
+        return X_MARK
+    
     """Check if a player won on a row
     Args:
         l: a 3 element iterable
@@ -19,6 +23,7 @@ def check_row(l):
     return None
 
 def check_win(board):
+    
     """Check if a player has won on a board
     Args:
         board: a 3x3 2D array
@@ -38,8 +43,8 @@ class TicTacToe:
 
     app = None
     board = None # The storage for user's markers
-    buttons = None # Holds UI elements for the board
-    board_pane = None #
+    buttons = None # Holds GUI elements for the board
+    board_pane = None
     message = None
     turn_n = 0
     turn = X_MARK
