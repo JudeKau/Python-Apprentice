@@ -23,21 +23,11 @@ def check_row(l):
         The winner's token ( x or o ) if there is one, otherwise None
         """
 
-    return None
+    
 
 def check_win(board):
-    if board[0] == X_MARK:
-        return X_MARK
-    elif board[0] == O_MARK:
-        return O_MARK
-    elif board[1] == O_MARK:
-        return O_MARK
-    elif board[1] == X_MARK:
-        return X_MARK
-    elif board[2] == O_MARK:
-        return O_MARK
-    elif board[2] == X_MARK:
-        return X_MARK
+    
+    
     """Check if a player has won on a board
     Args:
         board: a 3x3 2D array
