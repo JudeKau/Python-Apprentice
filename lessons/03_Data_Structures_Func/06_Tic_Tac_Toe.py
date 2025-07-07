@@ -13,9 +13,11 @@ board = [
         [7, 8, 9]
     ]
 
-l = [list(e) for e in zip(*board)]
-
 def check_row(l):
+    if l[0] == l[1] and l[1] == l[2] and l[0] is not None:
+        return l[0]
+    else:
+        pass
     
     """Check if a player won on a row 
     Args:
@@ -28,30 +30,7 @@ def check_row(l):
     
 
 def check_win(board):
-    if l[0] == X_MARK:
-        return 
-    elif l[1] == X_MARK:
-        return
-    elif l[2] == X_MARK:
-        return
-    elif l[0] == O_MARK:
-        return 
-    elif l[1] == O_MARK:
-        return
-    elif l[2] == O_MARK:
-        return
-    elif board[0] == X_MARK:
-        return 
-    elif board[1] == X_MARK:
-        return
-    elif board[2] == X_MARK:
-        return
-    elif board[0] == O_MARK:
-        return 
-    elif board[1] == O_MARK:
-        return
-    elif board[2] == O_MARK:
-        return
+    
     """Check if a player has won on a board
     Args:
         board: a 3x3 2D array
