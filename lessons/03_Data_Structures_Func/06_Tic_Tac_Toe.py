@@ -8,16 +8,18 @@ O_MARK = "O"
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
 
 board = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
+         [1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]
     ]
+
+# t  = [list(e) for e in zip(*board)] 
 
 def check_row(l):
     if l[0] == l[1] and l[1] == l[2] and l[0] is not None:
         return l[0]
     else:
-        pass
+        return None
     
     """Check if a player won on a row 
     Args:
@@ -30,7 +32,13 @@ def check_row(l):
     
 
 def check_win(board):
-    
+    for l in board:
+        if check_row(l) is not None:
+            return l[0]
+        if t[0] == t[1] and t[1] == t[2] and l[0] is not None:
+            return l[0]
+        else:
+            pass
     """Check if a player has won on a board
     Args:
         board: a 3x3 2D array
@@ -83,7 +91,7 @@ class TicTacToe:
         # generate a 3x3 grid
         for x in range(3):
             for y in range(3):
-                self.buttons[x][y] = PushButton(self.board_pane, text='', grid=[x, y], width=3, command=self.do_turn, args=[x,y])
+                self.buttons[x][y] = PushButton(self.board_pane, text='', grid=[y, x], width=3, command=self.do_turn, args=[x,y])
 
     def start(self):
         """Start the game"""
