@@ -13,8 +13,6 @@ board = [
          [7, 8, 9]
     ]
 
-# t  = [list(e) for e in zip(*board)] 
-
 def check_row(l):
     if l[0] == l[1] and l[1] == l[2] and l[0] is not None:
         return l[0]
@@ -33,12 +31,25 @@ def check_row(l):
 
 def check_win(board):
     for l in board:
-        if check_row(l) is not None:
-            return l[0]
-        if t[0] == t[1] and t[1] == t[2] and l[0] is not None:
-            return l[0]
+        if board[0][0] == board[0][1] and board[0][1] == board[0][2] and board[0][0] is not None:
+            return board[0][0]
+        elif board[1][0] == board[1][1] and board[1][1] == board[1][2] and board[1][0] is not None:
+            return board[1][0]
+        elif board[2][0] == board[2][1] and board[2][1] == board[2][2] and board[2][0] is not None:
+            return board[2][0]
+        elif board[0][1] == board[1][1] and board[1][1] == board[2][1] and board[0][1] is not None:
+            return board[0][1]
+        elif board[0][0] == board[1][0] and board[1][0] == board[2][0] and board[0][0] is not None:
+            return board[0][0]
+        elif board[0][2] == board[1][2] and board[1][2] == board[2][2] and board[0][2] is not None:
+            return board[0][2]
+        elif board[0][0] == board[1][1] and board[1][1] == board[2][2] and board[0][0] is not None:
+            return board[0][0]
+        elif board[0][2] == board[1][1] and board[1][1] == board[2][0] and board[0][2] is not None:
+            return board[0][2] 
         else:
-            pass
+            return None
+        
     """Check if a player has won on a board
     Args:
         board: a 3x3 2D array
